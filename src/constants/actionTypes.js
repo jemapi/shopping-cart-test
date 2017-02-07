@@ -3,8 +3,9 @@
 var keyMirror = require('react/lib/keyMirror');
 
 module.exports = keyMirror({
-	INITIALIZE: null,
-	CREATE_AUTHOR: null,
-	UPDATE_AUTHOR: null,
-	DELETE_AUTHOR: null
+	INITIALIZE_ITEMS: null,
+	INITIALIZE_CART: null,
+	CREATE_CART_ITEM: null,
+	DELETE_CART_ITEM: null,
+	DELETE_CART_ITEM_ALL: null
 });

@@ -2,14 +2,21 @@
 
 var Dispatcher = require('../dispatcher/appDispatcher');
 var ActionTypes = require('../constants/actionTypes');
-var AuthorApi = require('../api/authorApi');
+var CartApi = require('../api/cartApi');
+var items = require('../api/itemData');
 
 var InitializeActions = {
-	initApp: function() {
+	initItems: function() {
 		Dispatcher.dispatch({
-			actionType: ActionTypes.INITIALIZE,
+			actionType: ActionTypes.INITIALIZE_ITEMS,
+			initialData: items
+		});
+	},
+	initCart: function() {
+		Dispatcher.dispatch({
+			actionType: ActionTypes.INITIALIZE_CART,
 			initialData: {
-				authors: AuthorApi.getAllAuthors()
+				items: CartApi.getAllItems()
 			}
 		});
 	}
