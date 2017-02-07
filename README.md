@@ -4,6 +4,7 @@ To compile:
 
 - npm install -g gulp (if gulp is not installed, version must be 3.9.1)
 - npm install (to install dependencies)
+- npm update (update dependencies)
 - gulp
 
 If warning: Warning: gulp version mismatch do:
